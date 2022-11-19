@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        background-color: cadetblue;
+        display: grid;
+        place-items: center;
+      }
+      .main {
+        width: 200px;
+        height: 200px;
+        background: radial-gradient(#8a3ab9, #bc2a8d, #fccc63);
+        border-radius: 40px;
+        position: relative;
+      }
+      .logo {
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        border: 10px solid white;
+        border-radius: 40px;
+      }
+      .circle {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        border: 10px solid white;
+        border-radius: 50%;
+      }
+      .logo::after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background-color: white;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="logo">
+        <div class="circle"></div>
+      </div>
+    </div>
+  </body>
+</html>

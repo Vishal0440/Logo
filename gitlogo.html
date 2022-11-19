@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        background-color: cadetblue;
+        display: grid;
+        place-items: center;
+      }
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: rgb(233, 131, 76);
+        border-radius: 20px;
+        transform: rotate(45deg);
+      }
+      .line {
+        width: 140px;
+        height: 15px;
+        background-color: white;
+        position: relative;
+        top: 50px;
+      }
+      .line::after {
+        content: "";
+        width: 100px;
+        height: 15px;
+        top: 40px;
+        left: 50px;
+        transform: rotate(50deg);
+        background-color: white;
+        position: absolute;
+      }
+      .circle {
+        width: 40px;
+        height: 40px;
+        background-color: white;
+        border-radius: 50%;
+        position: relative;
+        left: 50px;
+        top: -10px;
+      }
+      .circle::after {
+        content: "";
+        width: 40px;
+        height: 40px;
+        background-color: white;
+        border-radius: 50%;
+        position: absolute;
+        top: 0px;
+        left: 80px;
+      }
+      .circle::before {
+        content: "";
+        width: 40px;
+        height: 40px;
+        background-color: white;
+        border-radius: 50%;
+        position: absolute;
+        top: 80px;
+        left: 70px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="line">
+        <div class="circle"></div>
+      </div>
+    </div>
+  </body>
+</html>
